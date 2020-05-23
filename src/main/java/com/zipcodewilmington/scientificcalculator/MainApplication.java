@@ -1,17 +1,25 @@
 package com.zipcodewilmington.scientificcalculator;
 
-/**
- * Created by leon on 2/9/18.
- */
+import java.util.Scanner;
+
 public class MainApplication {
     public static void main(String[] args) {
-        Console.println("Welcome to my calculator!");
-        String s = Console.getStringInput("Enter a string");
-        Integer i = Console.getIntegerInput("Enter an integer");
-        Double d = Console.getDoubleInput("Enter a double.");
+        Scanner scan = new Scanner(System.in);
+        float number1, number2, result;
+        String name;
 
-        Console.println("The user input %s as a string", s);
-        Console.println("The user input %s as a integer", i);
-        Console.println("The user input %s as a d", d);
+        System.out.println("Hi. What's your name?");
+        name = scan.nextLine();
+
+        System.out.println("Hi " + name + ", Enter first number: ");
+        number1 = scan.nextFloat();
+        System.out.println("Enter second number: ");
+        number2 = scan.nextFloat();
+        result = number1 + number2;
+        System.out.println(result);
+
     }
+
+
+
 }
