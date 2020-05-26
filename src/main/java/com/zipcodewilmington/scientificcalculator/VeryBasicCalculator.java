@@ -4,89 +4,87 @@ import java.util.Scanner;
 
 public class VeryBasicCalculator {
     Scanner scan = new Scanner(System.in);
+    double x, y;
 
-    public void showMenu() {
-        System.out.println("Enter 1 to add");;
+    public void showOptions() {
+        System.out.println("Enter 1 to add");
         System.out.println("Enter 2 to subtract");
         System.out.println("Enter 3 to multiply");
         System.out.println("Enter 4 to divide");
 
     }
 
-    public double division() {
-        double a, b;
-        System.out.println("Enter first value");
-        a = scan.nextDouble();
-        System.out.println("Enter first value");
-        b = scan.nextDouble();
-        double val = a / b;
+    public double divide() {
+        System.out.println("Enter your first number");
+        x = scan.nextDouble();
+        System.out.println("Enter your second number");
+        y = scan.nextDouble();
+        double value = x / y;
 
-        return val;
+        return value;
     }
 
-    public double multiply() {
-        double a, b;
-        System.out.println("Enter first value");
-        a = scan.nextDouble();
-        System.out.println("Enter first value");
-        b = scan.nextDouble();
-        double val = a * b;
+    public double multiply(){
+        double x, y;
+        System.out.println("Enter your first number");
+        x = scan.nextDouble();
+        System.out.println("Enter your second number");
+        y = scan.nextDouble();
+        double value = x * y;
 
-        return val;
+        return value;
     }
 
-    public double substraction() {
-        double a, b;
-        System.out.println("Enter first value");
-        a = scan.nextDouble();
-        System.out.println("Enter first value");
-        b = scan.nextDouble();
-        double val = a - b;
+    public double subtract() {
+        System.out.println("Enter your first number");
+        x = scan.nextDouble();
+        System.out.println("Enter second number");
+        y = scan.nextDouble();
+        double value = x - y;
 
-        return val;
+        return value;
     }
 
-    public double addition() {
-        double a, b;
-        System.out.println("Enter first value");
-        a = scan.nextDouble();
-        System.out.println("Enter first value");
-        b = scan.nextDouble();
-        double val = a + b;
+    public double add() {
+        System.out.println("Enter your first number");
+        x = scan.nextDouble();
+        System.out.println("Enter second number");
+        y = scan.nextDouble();
+        double value = x + y;
 
-        return val;
+        return value;
     }
+
 
     public static void main(String[] args) {
-        VeryBasicCalculator calc = new VeryBasicCalculator();
+        VeryBasicCalculator math = new VeryBasicCalculator();
         Scanner scan = new Scanner(System.in);
         int x;
-        double score;
-        calc.showMenu();
+        double choice;
+        math.showOptions();
         x = scan.nextInt();
 
         switch (x) {
             case 1:
-                score = calc.addition();
-                System.out.println(score);
+                choice = math.add();
+                System.out.println(choice);
                 break;
             case 2:
-                score = calc.substraction();
-                System.out.println(score);
+                choice = math.subtract();
+                System.out.println(choice);
                 break;
             case 3:
-                score = calc.multiply();
-                System.out.println(score);
+                choice = math.multiply();
+                System.out.println(choice);
                 break;
             case 4:
-                score = calc.division();
-                System.out.println(score);
+                choice = math.divide();
+                System.out.println(choice);
                 break;
             default:
-                System.out.println("Wrong choice");
+                System.out.println("Invalid choice.");
                 break;
         }
-
     }
 }
 
